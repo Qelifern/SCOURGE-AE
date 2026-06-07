@@ -1,0 +1,14 @@
+# Visual Studio build results
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+Builds/
+build/
+.xmake/
+vsxmake2022/
+
+# Other
+.vs/
