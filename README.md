@@ -1,55 +1,25 @@
-# CommonLibF4 Plugin Template
+Description
+SCOURGE ported to Fallout 4 AE 1.11.221.0
+See original mod for description: https://www.nexusmods.com/fallout4/mods/60917
 
-This is a basic plugin template using CommonLibF4.
+Requirements
+F4SE - 1.11.221.0 - https://www.nexusmods.com/fallout4/mods/42147
+Address Library - 1.11.221.0 - https://www.nexusmods.com/fallout4/mods/47327
+Scaling Flag Remover - F4SE - AE - https://www.nexusmods.com/fallout4/mods/105868
 
-### Requirements
-* [XMake](https://xmake.io) [3.0.0+]
-* C++23 Compiler (MSVC or Clang-CL)
+Recommended
+MCM - (AE versions in their Discord) - https://www.nexusmods.com/fallout4/mods/21497
+MCM Booster - https://www.nexusmods.com/fallout4/mods/56997
+MCM Booster AE - https://www.nexusmods.com/fallout4/mods/99867
 
-## Getting Started
-```bat
-git clone --recurse-submodules https://github.com/libxse/commonlibf4-template
-cd commonlibf4-template
-```
+Unleveled World - F4SE - AE - https://www.nexusmods.com/fallout4/mods/105827
 
-### Build
-To build the project, run the following command:
-```bat
-xmake build
-```
 
-> ***Note:*** *This will generate a `build/windows/` directory in the **project's root directory** with the build output.*
 
-### Build Output (Optional)
-If you want to redirect the build output, set one of the following environment variables:
+Disclaimer
+I am new to F4SE & CommonLibF4 and this mod will needs more testing to verify everything works and doesn't produce crashes.
 
-- Path to a Mod Manager mods folder: `XSE_FO4_MODS_PATH`
-
-  or
-
-- Path to a Fallout 4 install folder: `XSE_FO4_GAME_PATH`
-
-### Project Generation (Optional)
-If you use Visual Studio, run the following command:
-```bat
-xmake project -k vsxmake
-```
-
-> ***Note:*** *This will generate a `vsxmakeXXXX/` directory in the **project's root directory** using the latest version of Visual Studio installed on the system.*
-
-**Alternatively**, if you do not use Visual Studio, you can generate a `compile_commands.json` file for use with a laguage server like clangd in any code editor that supports it, like vscode:
-```bat
-xmake project -k compile_commands
-```
-
-> ***Note:*** *You must have a language server extension installed to make use of this file. I recommend `clangd`. Do not have more than one installed at a time as they will conflict with each other. I also recommend installing the `xmake` extension if available to make building the project easier.*
-
-### Upgrading Packages (Optional)
-If you want to upgrade the project's dependencies, run the following commands:
-```bat
-xmake repo --update
-xmake require --upgrade
-```
-
-## Documentation
-Please refer to the [Wiki](../../wiki/Home) for more advanced topics.
+Credits
+https://github.com/GELUXRUM/SCOURGE
+https://github.com/libxse/commonlibf4
+https://github.com/libxse/commonlibf4-template
