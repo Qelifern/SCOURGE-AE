@@ -3,17 +3,6 @@
 #include "RNJesus.h"
 #include "SCOURGE.h"
 #include "YamlParser.h"
-#include "IPluginCommon.h"
-#include "IVersionCheck.h"
-#include <pch.h>
-
-#include <config.h>
-
-
-// Windows
-#include <shlobj.h>	// CSIDL_MYCODUMENTS
-
-
 
 
 
@@ -24,37 +13,9 @@ RNJesus mathUtils;
 
 
 
-extern "C" DLLEXPORT bool F4SEAPI F4SEPlugin_Query(const F4SE::QueryInterface* f4se, F4SE::PluginInfo* info)
-{
-	
-	REX::INFO(PLUGIN_VERSION_INFO); // write the plugin version to the log
-	REX::INFO("Plugin_Query: Querying");
-
-	// populate info structure
-	info->infoVersion = F4SE::PluginInfo::kVersion;
-	info->name = PLUGIN_NAME_LONG;		// set in config.h
-	info->version = PLUGIN_VERSION_DLL;		// set in config.h
-
-
-	const auto ver = f4se->RuntimeVersion();
-	if (ver < F4SE::RUNTIME_1_11_221) {
-		REX::INFO("unsupported runtime v{}", ver.string());
-		return false;
-	}
-
-
-	REX::INFO("Plugin_Query: Queried Successfully"); // log the successful query
-
-	// supported runtime version
-	return true;
-}
-
-
-extern "C" DLLEXPORT bool F4SEAPI F4SEPlugin_Load(const F4SE::LoadInterface * a_f4se)
+F4SE_PLUGIN_LOAD(const F4SE::LoadInterface* a_f4se)
 {
 
-
-	REX::INFO(PLUGIN_VERSION_INFO);
 	REX::INFO("Plugin_Load: Loading");
 
 
